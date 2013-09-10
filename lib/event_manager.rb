@@ -3,6 +3,7 @@ require "sunlight/congress"
 
 Sunlight::Congress.api_key = "43099cda060647608f76e966f3119679"
 
+
 # def clean_zipcode(zipcode)
 # 	if zipcode.nil?
 # 		"00000"
@@ -58,6 +59,8 @@ puts "Everything Intialized"
 
 
 
+
+# Open up a CSV with headers then iterate through the CSV calling out the nane and zipcode then compare the zipcode against the Congress API to get legislators
 contents = CSV.open "event_attendees.csv", headers: true, header_converters: :symbol
 contents.each do |row|
 	name = row[:first_name]
